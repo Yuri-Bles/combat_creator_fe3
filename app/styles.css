@@ -1,0 +1,27 @@
+button {
+  background-color: #FF0040;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+}
+
+  button:hover {
+    background-color: #F93969;
+  }
+
+input {
+  background-color: white;
+  color: #FF0040;
+  padding: 1rem;
+  transition: background-color 0.3s;
+  border-width: 3px;
+  border-radius: 8px;
+  border-color: #FF0040;
+}
+
+  input:disabled {
+    color: #ffa9bf;
+    border-color: #ffa9bf;
+  }

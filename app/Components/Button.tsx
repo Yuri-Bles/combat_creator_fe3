@@ -1,3 +1,5 @@
+import "../styles.css";
+
 type ButtonProps = {
   label: string;
   onClick?: () => void;
@@ -6,10 +8,9 @@ type ButtonProps = {
 
 export default function Button({ label, onClick, type = "button" }: ButtonProps) {
   return (
-    <button
+    <button className="button"
       type={type}
       onClick={onClick}
-      className="px-3 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
     >
       {label}
     </button>
