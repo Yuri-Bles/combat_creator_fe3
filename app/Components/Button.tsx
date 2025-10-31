@@ -9,7 +9,7 @@ export default function Button({ label, onClick, type = "button" }: ButtonProps)
     <button
       type={type}
       onClick={onClick}
-      className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+      className="px-3 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
     >
       {label}
     </button>
