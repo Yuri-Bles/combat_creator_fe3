@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
-import Button from "../Components/Button";
+import PrimaryButton from "../Components/PrimaryButton";
+import SecondaryButton from "../Components/SecondaryButton";
 import Textbox from "~/Components/Textbox";
 import { useState } from "react";
 
@@ -21,8 +22,8 @@ export default function Home() {
   return (
     <div>
       <Welcome />
-      <Button label="Click Me" onClick={handleClick} />
-      <Button label="Submit" type="submit" />
+      <PrimaryButton label="Yes" onClick={handleClick} />
+      <SecondaryButton label="No" type="submit" />
       <Textbox value={name} onChange={setName} placeholder="Enter your name" />
     </div>
   );

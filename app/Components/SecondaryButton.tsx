@@ -6,9 +6,9 @@ type ButtonProps = {
   type?: "button" | "submit" | "reset";
 };
 
-export default function Button({ label, onClick, type = "button" }: ButtonProps) {
+export default function SecondaryButton({ label, onClick, type = "button" }: ButtonProps) {
   return (
-    <button className="button"
+    <button className="button-secondary"
       type={type}
       onClick={onClick}
     >
