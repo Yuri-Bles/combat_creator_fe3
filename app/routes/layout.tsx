@@ -1,0 +1,13 @@
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "../Components/Navbar";
+
+export default function Layout() {
+  return (
+    <div>
+      <Navbar />
+      <Outlet />
+      <div>Outlet would be here</div>
+    </div>
+  );
+}
