@@ -4,18 +4,10 @@ import PrimaryButton from "../Components/PrimaryButton";
 import SecondaryButton from "../Components/SecondaryButton";
 import Textbox from "~/Components/Textbox";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
 
-export default function Home() {
+export default function CombatSystemDraft() {
   const [name, setName] = useState("");
-  const navigate = useNavigate();
 
   function handleClick() {
     alert("Button clicked!");
@@ -23,10 +15,11 @@ export default function Home() {
 
   return (
     <div>
+          <p>Combat System Draft</p>
+        <h1>Combat System Draft Page</h1>
       <Welcome />
       <PrimaryButton label="Yes" onClick={handleClick} />
       <SecondaryButton label="No" type="submit" />
-      <PrimaryButton label="To Draft Page" onClick={() => navigate("/combat_system_draft")}/>
       <Textbox value={name} onChange={setName} placeholder="Enter your name" />
     </div>
   );
