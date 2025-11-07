@@ -52,3 +52,20 @@ input {
     color: #ffa9bf;
     border-color: #ffa9bf;
   }
+
+  .num-updown {
+    width: 120px;
+  }
+
+.element-outline {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 4px;
+  color: #FF0040;
+  border-color: #F93969;
+  background-color: white;
+  border-radius: 8px;
+  border-width: 3px;
+}
