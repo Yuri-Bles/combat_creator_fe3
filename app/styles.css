@@ -4,6 +4,8 @@ button {
   padding-left: 20px;
   padding-right: 20px;
   margin: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
   transition: background-color 0.3s;
   border-radius: 8px;
   border-width: 3px;
@@ -34,6 +36,34 @@ button {
       background-color: white;
     }
 
+  .button-navbar {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: black;
+    border-width: 0px;
+    background-color: #dfdfdf;
+  }
+  
+    .button-navbar:hover {
+      color: black;
+      background-color: #FF0040;
+    }
+
+.element-outline {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 4px;
+  color: #FF0040;
+  border-color: #F93969;
+  background-color: white;
+  border-radius: 8px;
+  border-width: 3px;
+}
+
 input {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -57,17 +87,11 @@ input {
     width: 120px;
   }
 
-.element-outline {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 4px;
-  color: #FF0040;
-  border-color: #F93969;
-  background-color: white;
-  border-radius: 8px;
-  border-width: 3px;
+.navbar {
+  border-bottom: 3px solid #F93969;
+  background-color: #dfdfdf;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,15 +104,29 @@ input {
     background-color: #1e1e1e;
   }
 
-  .button-secondary:hover {
-    background-color: #2a2a2a;
+    .button-secondary:hover {
+      background-color: #2a2a2a;
+    }
+
+    .button-navbar {
+    color: white;
+    background-color: #444444;
   }
   
+    .button-navbar:hover {
+      color: white;
+      background-color: #FF0040;
+    }
+  
+  .element-outline {
+    background-color: #1e1e1e;
+  }
+
   input {
     background-color: #1e1e1e;
   }
 
-  .element-outline {
-    background-color: #1e1e1e;
+  .navbar {
+    background-color: #444444;
   }
 }

@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 import PrimaryButton from "../Components/PrimaryButton";
 import SecondaryButton from "../Components/SecondaryButton";
+import NavbarButton from "../Components/NavbarButton";
 import Textbox from "~/Components/Textbox";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,11 +23,11 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="w-screen min-h-screen m-0 p-0 overflow-x-hidden">
       <Welcome />
       <PrimaryButton label="Yes" onClick={handleClick} />
       <SecondaryButton label="No" type="submit" />
-      <PrimaryButton label="To Draft Page" onClick={() => navigate("/combat_system_draft")}/>
+      <NavbarButton label="To Draft Page" onClick={() => navigate("/combat_system_draft")}/>
       <Textbox value={name} onChange={setName} placeholder="Enter your name" />
     </div>
   );

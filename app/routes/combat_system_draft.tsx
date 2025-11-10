@@ -25,13 +25,8 @@ export default function CombatSystemDraft() {
 
   return (
     <div>
-          <p>Combat System Draft</p>
-        <h1>Combat System Draft Page</h1>
       <Welcome />
       <DraftStatHtml DraftStat={ExampleDraftStat} />
-      <PrimaryButton label="Yes" onClick={handleClick} />
-      <SecondaryButton label="No" type="submit" />
-      <Textbox value={name} onChange={setName} placeholder="Enter your name" />
     </div>
   );
 }
