@@ -69,3 +69,26 @@ input {
   border-radius: 8px;
   border-width: 3px;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  .button-secondary {
+    background-color: #1e1e1e;
+  }
+
+  .button-secondary:hover {
+    background-color: #2a2a2a;
+  }
+  
+  input {
+    background-color: #1e1e1e;
+  }
+
+  .element-outline {
+    background-color: #1e1e1e;
+  }
+}
