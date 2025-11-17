@@ -6,28 +6,36 @@ import { useState } from "react";
 
 type Props = {
   DraftStat: DraftStat;
+  onChange: (updatedStat: DraftStat) => void;
 };
 
-export default function DraftStatHtml({ DraftStat }: Props) {
+export default function DraftStatHtml({ DraftStat, onChange }: Props) {
   const {
-    Id
+    Name, DefaultValue, MinValue, MaxValue
   } = DraftStat;
-
-  const [Name, setName] = useState(DraftStat.Name);
-  const [DefaultValue, setDefaultValue] = useState(DraftStat.DefaultValue)
-  const [MinValue, setMinValue] = useState(DraftStat.MinValue)
-  const [MaxValue, setMaxValue] = useState(DraftStat.MaxValue)
 
   return (
     <div className="element-outline" style={{ display: "flex", gap: "20px", alignItems: "center" }}>
       <h3>Name:</h3>
-      <Textbox value={Name} onChange={setName} />
+      <Textbox
+        value={Name}
+        onChange={(val) => onChange({ ...DraftStat, Name: val })}
+      />
       <h3>Default Value:</h3>
-      <NumUpDown value={DefaultValue} onChange={(val) => setDefaultValue(Number(val))} />
+      <NumUpDown
+        value={DefaultValue}
+        onChange={(val) => onChange({ ...DraftStat, DefaultValue: Number(val) })}
+      />
       <h3>Minimum Value:</h3>
-      <NumUpDown value={MinValue} onChange={(val) => setMinValue(Number(val))} />
+      <NumUpDown
+        value={MinValue}
+        onChange={(val) => onChange({ ...DraftStat, MinValue: Number(val) })}
+      />
       <h3>Maximum Value:</h3>
-      <NumUpDown value={MaxValue} onChange={(val) => setMaxValue(Number(val))} />
+      <NumUpDown
+        value={MaxValue}
+        onChange={(val) => onChange({ ...DraftStat, MaxValue: Number(val) })}
+      />
     </div>
   );
 }
