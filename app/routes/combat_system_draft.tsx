@@ -49,6 +49,33 @@ export default function CombatSystemDraft() {
       });
   }, []);
 
+  const createStat = () =>
+  {
+    fetch(`http://127.0.0.1:5000/create_system_stat`, 
+    {
+      method: "POST",
+      headers: 
+      {
+        "Content-Type": "application/json",
+        "api-key": "w6+7OT8yc>I=aR%)h{sG(dTU"
+      },
+      body: JSON.stringify({
+        system_id: 1
+      })
+    })
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to create stat");
+      return response.json();
+    })
+    .then(data => {
+      console.log("Creation succeeded:", data);
+    })
+    .catch(err => {
+      console.error("Update error:", err);
+      alert(`Update failed: ${err.message}`);
+    });
+  }
+
   const updateStats = () => 
   {
     fetch(`http://127.0.0.1:5000/update_system_stats_by_system_id`, 
@@ -70,7 +97,6 @@ export default function CombatSystemDraft() {
     })
     .then(data => {
       console.log("Update succeeded:", data);
-      alert("Stats updated!");
     })
     .catch(err => {
       console.error("Update error:", err);
@@ -87,6 +113,7 @@ export default function CombatSystemDraft() {
         {stats.map((stat) => (
           <DraftStatHtml key={stat.Id} DraftStat={stat} onChange={handleStatChange} />
         ))}
+        <PrimaryButton label="Create New Stat" onClick={createStat} />
         <PrimaryButton label="Update Stats" onClick={updateStats} />
     </div>
   );
